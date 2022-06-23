@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="HelloWorld, 1wi的玩具箱">
-    <meta name="description" content="测试文章功能">
+    <meta name="keywords" content="前端网络请求一文详解, 1wi的玩具箱">
+    <meta name="description" content="前端网络请求一文详解">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
 
     
 
-    <title>HelloWorld | 1wi的玩具箱</title>
+    <title>前端网络请求一文详解 | 1wi的玩具箱</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -287,12 +287,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">HelloWorld</h1>
+                    <h1 class="description center-align post-title">前端网络请求一文详解</h1>
                 </div>
             </div>
         </div>
@@ -406,12 +406,33 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Axios/">
+                                <span class="chip bg-color">Axios</span>
+                            </a>
+                        
+                            <a href="/tags/Ajax/">
+                                <span class="chip bg-color">Ajax</span>
+                            </a>
+                        
+                            <a href="/tags/XMLHttpRequest/">
+                                <span class="chip bg-color">XMLHttpRequest</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/" class="post-category">
+                                网络请求
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -420,7 +441,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-06-21
+                    2022-06-23
                 </div>
                 
 
@@ -434,14 +455,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    73
+                    686
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -461,20 +482,87 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span>
+                <h1 id="网络请求，我们关注什么？"><a href="#网络请求，我们关注什么？" class="headerlink" title="网络请求，我们关注什么？"></a>网络请求，我们关注什么？</h1><p>在一次网络请求中，我们可能会对如下这些点比较关注：</p>
+<ul>
+<li>url，即请求路径</li>
+<li>请求方式，如GET&#x2F;POST&#x2F;…</li>
+<li>设置请求头</li>
+<li>携带cookie</li>
+<li>跨域</li>
+<li>如何处理响应，包括响应头、响应状态码、响应体</li>
+<li>异常处理</li>
+</ul>
+<h1 id="如何进行一次网络请求？"><a href="#如何进行一次网络请求？" class="headerlink" title="如何进行一次网络请求？"></a>如何进行一次网络请求？</h1><p>我们都有哪些方法可以发送网络请求：</p>
+<ul>
+<li>form表单提交</li>
+<li>Ajax</li>
+<li>JQuery</li>
+<li>fetch</li>
+<li>Axios等网络请求库</li>
+</ul>
+<h1 id="Ajax"><a href="#Ajax" class="headerlink" title="Ajax"></a>Ajax</h1><p>Ajax全称Asynchronous JavaScript And XML（异步的JavaScript和XML）</p>
+<h2 id="Ajax解决了什么问题？"><a href="#Ajax解决了什么问题？" class="headerlink" title="Ajax解决了什么问题？"></a>Ajax解决了什么问题？</h2><p>在Ajax出现之前，任何与服务器的交互——想象一下你在掘金社区某篇文章下点个赞——都会触发刷新页面，用户体验可想而知</p>
+<p>Ajax就是<strong>局部刷新页面</strong>的技术的统称，其中XMLHttpRequest是常用的实现Ajax的方案</p>
+<h2 id="XMLHttpRequest实现Ajax"><a href="#XMLHttpRequest实现Ajax" class="headerlink" title="XMLHttpRequest实现Ajax"></a>XMLHttpRequest实现Ajax</h2><p>以POST请求为例，使用方式如下：</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/* 创建XMLHttpRequest实例对象 */</span>
+<span class="token keyword">const</span> xhr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XMLHttpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">/* open()用于初始化一个请求 */</span>
+<span class="token comment" spellcheck="true">/* 参数：请求方式, 请求URL, 是否异步发送请求 */</span>
+xhr<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">'post'</span><span class="token punctuation">,</span> <span class="token string">'www.xxx.com'</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">/* 设置请求头 */</span>
+<span class="token comment" spellcheck="true">/* 参数：请求头字段名, 请求头字段值 */</span>
+xhr<span class="token punctuation">.</span><span class="token function">setRequestHeader</span><span class="token punctuation">(</span><span class="token string">"Content-type"</span><span class="token punctuation">,</span> <span class="token string">"application/x-www-form-urlencoded"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">/* 异常处理，这里的异常并不包括诸如状态码4xx等成功收到响应情况 */</span>
+xhr<span class="token punctuation">.</span>onerror <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Network request failed'</span><span class="token punctuation">)</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">/* 当跨域时是否携带cookie */</span>
+xhr<span class="token punctuation">.</span>withCredentials <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">/*
+ * xhr的readyState属性有5个值，分别对应由发起请求到响应完成过程中的5个状态：
+ *   0：未初始化状态，尚未调用open()
+ *   1：启动状态，已调用open()，尚未调用send()
+ *   2：发送状态，已调用send()，尚未收到响应
+ *   3：接收状态，已经收到部分响应数据
+ *   4：完成状态，已经收到全部响应数据
+*/</span>
+<span class="token comment" spellcheck="true">/* 每次状态改变，xhr.readyState的值都会做相应更新，且触发一次xhr.onreadystatechange */</span>
+xhr<span class="token punctuation">.</span>onreadystatechange <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>readyState <span class="token operator">===</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">/* xhr.status获取http状态码 */</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>status <span class="token operator">>=</span> <span class="token number">200</span> <span class="token operator">&amp;&amp;</span> xhr<span class="token punctuation">.</span>status <span class="token operator">&lt;</span> <span class="token number">300</span><span class="token punctuation">)</span> <span class="token operator">||</span> xhr<span class="token punctuation">.</span>status <span class="token operator">==</span> <span class="token number">304</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">/* 请求成功 */</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>responseText<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">/* 处理请求参数 */</span>
+postData <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token string">"name1"</span><span class="token punctuation">:</span> <span class="token string">"value1"</span><span class="token punctuation">,</span>
+    <span class="token string">"name2"</span><span class="token punctuation">:</span> <span class="token string">"value2"</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+postData <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> dataString <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> key <span class="token keyword">in</span> value<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        dataString <span class="token operator">+</span><span class="token operator">=</span> key <span class="token operator">+</span> <span class="token string">"="</span> <span class="token operator">+</span> value<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">"&amp;"</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> dataString<span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">(</span>postData<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">/* send()用于发出请求 */</span>
+<span class="token comment" spellcheck="true">/* 参数：请求体中的信息（不传也需要传null） */</span>
+xhr<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>postData<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<blockquote>
+<p>下图列出了XMLHttpRequest的属性、函数、事件和异常处理，感兴趣的可以自行深入了解</p>
+</blockquote>
+<img src="/2022/06/23/qian-duan-wang-luo-qing-qiu-yi-wen-xiang-jie/1655958258535.png" class="" width="1655958258535">
 
+<h1 id="JQuery对Ajax的封装"><a href="#JQuery对Ajax的封装" class="headerlink" title="JQuery对Ajax的封装"></a>JQuery对Ajax的封装</h1><p>本人不会JQuery，也不打算学了，就跳过啦(︶.̮︶✽)</p>
+<h1 id="fetch：XMLHttpRequest的替代品"><a href="#fetch：XMLHttpRequest的替代品" class="headerlink" title="fetch：XMLHttpRequest的替代品"></a>fetch：XMLHttpRequest的替代品</h1><blockquote>
+<p>Fetch API是一个用用于访问和操纵HTTP管道的强大的原生API。</p>
+</blockquote>
+<p>（2022&#x2F;6&#x2F;23：日后补充（maybe））</p>
+<h1 id="网络请求库Axios"><a href="#网络请求库Axios" class="headerlink" title="网络请求库Axios"></a>网络请求库Axios</h1>
                 
             </div>
             <hr/>
@@ -500,7 +588,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://localhost:4000/2022/06/21/hello-world/">http://localhost:4000/2022/06/21/hello-world/</a>
+                    <a href="http://localhost:4000/2022/06/23/qian-duan-wang-luo-qing-qiu-yi-wen-xiang-jie/">http://localhost:4000/2022/06/23/qian-duan-wang-luo-qing-qiu-yi-wen-xiang-jie/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -537,7 +625,19 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/Axios/">
+                                    <span class="chip bg-color">Axios</span>
+                                </a>
+                            
+                                <a href="/tags/Ajax/">
+                                    <span class="chip bg-color">Ajax</span>
+                                </a>
+                            
+                                <a href="/tags/XMLHttpRequest/">
+                                    <span class="chip bg-color">XMLHttpRequest</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -583,9 +683,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2022/06/23/qian-duan-wang-luo-qing-qiu-yi-wen-xiang-jie/">
                     <div class="card-image">
@@ -603,9 +704,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-06-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-23
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -618,6 +719,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -641,7 +743,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2022/06/21/hello-world/">
@@ -671,7 +773,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
